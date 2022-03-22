@@ -77,15 +77,16 @@
         }, 30000);
 
         const inc = () => document.getElementById("title").style.fontSize = "50px";
-        const dec = () => document.getElementById("title").style.fontSize = "10px";
+        const dec = () => document.getElementById("title").style.fontSize = "40px";
 
         let movement;
         let speed = 10;
+        let isMoving = false;
 
         const move = () => {
             const car = document.getElementById("car-image");
             movement = setInterval(() => {
-                if (parseInt(car.style.left) >= (window.screen.availWidth / 2)) {
+                if (parseInt(car.style.left) >= window.screen.availWidth) {
                     car.style.left = "0px";
                 }
                 car.style.left = parseInt(car.style.left) + 1 + "px";
@@ -93,10 +94,15 @@
         }
 
         document.getElementById("move").addEventListener("click", (e) => {
+            if (isMoving) return;
+            isMoving = true;
             move();
         });
 
-        document.getElementById("stop").addEventListener("click", (e) => clearInterval(movement));
+        document.getElementById("stop").addEventListener("click", (e) => {
+            isMoving = false;
+            clearInterval(movement);
+        });
         document.getElementById("accelerator").addEventListener(
             "input",
             (e) => {
