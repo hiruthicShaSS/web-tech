@@ -13,7 +13,7 @@
 - [Ex 5](ex5/) : JS - DOM Elements and Events
 - [Ex 6](ex6/) : JAVASCRIPT – TIMER FUNCTIONS AND OBJECTS
 - [Ex 7](ex7/) : Bootstrap sucks!
-- [Ex 10](ex10/) : Isn't angular dead or somthin??
+- [Ex 10](ex10/comments.html) : Isn't angular dead or somthin??
   - [Comments](ex10/comments.html) : Comments go brrrrrr...
   - [Calculator](ex10/calculator.html) : 😵😵
   - [ToDo App](ex10/todo.html) : ToDo App, really n***a?
