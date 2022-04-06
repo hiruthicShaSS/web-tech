@@ -23,8 +23,8 @@
       ng-controller="calculatorController"
       class="exercise"
     >
-      <p><input type="number" ng-model="a" /></p>
-      <p><input type="number" ng-model="b" /></p>
+      <p>A: <input type="number" ng-model="a" /></p>
+      <p>B: <input type="number" ng-model="b" /></p>
       <select name="" id="" ng-model="ops">
         <option value="+">+</option>
         <option value="-">-</option>
@@ -38,7 +38,6 @@
       const calculator = angular.module("calculator-exercise", []);
 
       calculator.controller("calculatorController", function ($scope) {
-        console.log($scope);
         $scope.result = function () {
           if ($scope.ops == "+") return $scope.a + $scope.b;
           if ($scope.ops == "-") return $scope.a - $scope.b;

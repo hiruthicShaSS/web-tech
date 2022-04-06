@@ -35,9 +35,7 @@
 
       comments.controller("commentsController", function ($scope) {
           $scope.comments = [];
-          $scope.additem = function () {
-              $scope.comments.push($scope.comment);
-          };
+          $scope.additem = () => $scope.comments.push($scope.comment) ;
       });
     </script>
   </body>
